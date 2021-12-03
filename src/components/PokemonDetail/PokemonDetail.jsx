@@ -40,7 +40,7 @@ export default function PokemonDetail({ pokemon }) {
   );
 }
 
-PokemonDetail.PropTypes = {
+PokemonDetail.propTypes = {
   pokemon: PropTypes.shape({
     id: PropTypes.number.isRequired,
     url_image: PropTypes.string.isRequired,

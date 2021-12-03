@@ -1,4 +1,4 @@
-export const fetchPokemon = async () => {
+export default async function fetchPokemon() {
   const response = await fetch(
     `https://pokedex-alchemy.herokuapp.com/api/pokedex`
   );
@@ -7,4 +7,4 @@ export const fetchPokemon = async () => {
   const results = pokemonData.results;
   // console.log('pokemon', results);
   return results;
-};
+}
