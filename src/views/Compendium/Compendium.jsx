@@ -32,9 +32,6 @@ function Compendium() {
 
   useEffect(() => {
     async function getFilteredPokemon() {
-      // if (!selectedType) return;
-      // setLoading(true);
-
       if (selectedType !== "all") {
         const filteredPokemon = await fetchFilteredPokemon(selectedType);
         setPokemon(filteredPokemon);

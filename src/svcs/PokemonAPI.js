@@ -1,4 +1,4 @@
-import { pokeMunger } from "../utils/helpers";
+// import { pokeMunger } from "../utils/helpers";
 
 export async function fetchPokemon() {
   const response = await fetch(
