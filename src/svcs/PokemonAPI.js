@@ -1,4 +1,4 @@
-import { pokeMunger } from "../../utils/helpers";
+import { pokeMunger } from "../utils/helpers";
 
 export async function fetchPokemon() {
   const response = await fetch(
@@ -7,7 +7,6 @@ export async function fetchPokemon() {
 
   const pokemonData = await response.json();
   const results = pokemonData.results;
-  // console.log('pokemon', results);
   return results;
 }
 
@@ -25,13 +24,14 @@ export async function fetchTypes() {
   return randomTypes;
 }
 
-export const fetchFilteredPokemon = async (type) => {
+export async function fetchFilteredPokemon(type) {
   const res = await fetch(
     `https://pokedex-alchemy.herokuapp.com/api/pokedex?type=${type}`
   );
   const pokemonData = await res.json();
-  const filteredPokemon = pokemonData.results.map((pokemon) =>
-    pokeMunger(pokemon)
-  );
-  return filteredPokemon;
-};
+  // const filteredPokemon = pokemonData.results.map((pokemon) =>
+  //   pokeMunger(pokemon)
+  // );
+  // return filteredPokemon;
+  return pokemonData.results;
+}

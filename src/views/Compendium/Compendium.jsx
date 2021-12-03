@@ -1,9 +1,10 @@
 import { useState, useEffect, React } from "react";
 import Controls from "../../components/Controls/Controls";
-import fetchPokemon, {
-  fetchFilteredPokemon,
+import {
+  fetchPokemon,
   fetchTypes,
-} from "../../components/Pokemon/Pokemon";
+  fetchFilteredPokemon,
+} from "../../svcs/PokemonAPI.js";
 import PokemonList from "../../components/PokemonList/PokemonList";
 
 function Compendium() {
@@ -31,8 +32,8 @@ function Compendium() {
 
   useEffect(() => {
     async function getFilteredPokemon() {
-      if (!selectedType) return;
-      setLoading(true);
+      // if (!selectedType) return;
+      // setLoading(true);
 
       if (selectedType !== "all") {
         const filteredPokemon = await fetchFilteredPokemon(selectedType);
