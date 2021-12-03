@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a dropdown with types of pokemon 1`] = `
+<div>
+  <div
+    class="controlsContainer"
+  >
+    <div>
+      <h3>
+        Filter your Pokemon!
+      </h3>
+      <select>
+        <option
+          value="all"
+        >
+          All
+        </option>
+        <option />
+        <option />
+        <option />
+      </select>
+    </div>
+  </div>
+</div>
+`;
