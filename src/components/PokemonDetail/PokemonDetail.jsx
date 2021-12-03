@@ -19,12 +19,12 @@ export default function PokemonDetail({ pokemon }) {
         <p>
           Attack:
           {pokemon.attack}
-          {specialAttack}
+          {specialAttack && `/${pokemon.special_attack}`}
         </p>
         <p>
           Defense:
           {pokemon.defense}
-          {specialDefense}
+          {specialDefense && `/${pokemon.special_defense}`}
         </p>
         <p>
           HP:
